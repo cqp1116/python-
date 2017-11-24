@@ -1,0 +1,44 @@
+# -*- coding:utf_8 -*-
+'''
+Created on 2017年11月24日
+
+@author: chenqp
+
+以最快的速度介绍Python3基础信息
+Python为一门高阶、动态类型的多范式编程语言
+每个脚本会首先定义编码格式
+'''
+import sys
+from sys import path
+
+#python输出
+paraghe="""人生苦短
+tab(\t)
+请学Python"""
+#python 注释可以用''' ''' 进行多行注释
+#python在声明字符串时候""" """可以用三个双引号进行换行
+#同时支持在变量中引入\t 代表8位制表符
+#python3中 print 输出是带回车换行的，可是我们有时可能不需要回车
+x="a"
+y="b"
+print(x,end=" ")
+print(y,end=" ")
+#加上end 条件可以更改输出为   a  b
+
+#变量声明有点类似JavaScript变量声明
+a,b,c=1,0.3,"women"
+print(a,'=====',b,'+++',c[1:2])
+#注  :::为截取字符串，开始，结束，步长  分别为字符串信息
+isinstance(a,int)  #isinstance 为判断某个变量的数据类型
+
+#list 元素可以进行修改
+list=['abcd',1212,23.23,'我们']
+list[2]='张三'
+#将字符串转成 list 可以用 字符串中的 split
+#将list 转成字符串可以用  list.join
+str = ''.join(list) #但是现在这个list 会直接报错并不能转成字符变量，在list中如果有数字或者浮点类型必须进行转换
+str = ''.join(str(e) for e in list) # for循环简单写法
+#append 向list中插入元素，extend 为进行数组连接
+list.append(['man','woman'])  #输出['abcd',1212,23.23,'我们',['man','woman']]变成二维
+list.extend(['man','woman'])  #输出['abcd',1212,23.23,'我们','man','woman']
+在list数组操作中还有 pop 弹出一个元素，slices、del删除一个元素，remove 移除一个元素
